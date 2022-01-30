@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PAGE</title>
+    <style>
+        table, th ,td {
+  border: 2px solid black;
+}
+    </style>
+</head>
+<body>
+
+{{data}}
+<hr>
+<h2>Pages Information</h2>
+<table>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>user</th>
+    {% for page in data %}
+    <tr>
+        <td>{{page.id}}</td>
+        <td>{{page.name}}</td>
+        <td>{{page.category}}</td>
+        <td>{{page.date}}</td>
+        <td>{{page.user}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

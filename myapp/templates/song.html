@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SONG</title>
+    <style>
+        table, th ,td {
+  border: 2px solid black;
+}
+    </style>
+</head>
+<body>
+{{data}}
+<hr>
+<h2>songs Information</h2>
+<table>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Duration</th>
+    <th>Date</th>
+    <th>User</th>
+    {% for song in data %}
+    <tr>
+        <td>{{song.id}}</td>
+        <td>{{song.name}}</td>
+        <td>{{song.category}}</td>
+        <td>{{song.duration}}</td>
+        <td>{{song.date}}</td>
+        <td>{{song.get_singers}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER INFO</title>
+    <style>
+        table, th ,td {
+  border: 2px solid black;
+}
+    </style>
+</head>
+<body>
+{{data}}
+<hr>
+<h2>users Information</h2>
+<table>
+    <th>UserName</th>
+    <th>Firstname</th>
+    <th>LastName</th>
+    <th>Email</th>
+    {% for user in data %}
+    <tr>
+        <td>{{user.username}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
